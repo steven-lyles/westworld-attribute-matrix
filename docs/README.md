@@ -7,9 +7,7 @@ Interactive radar chart based on the host attribute matrix from Westworld Season
 
 A series of archived configurations tells Maeve’s story over the course of the season, while sliders show what it might feel like to configure host attributes directly through the radar chart.
 
-[**Live Demo ›**](http://epassi.co/lab/westworld)
-
-[**About the Project ›**](https://medium.com/@epassi/recreating-the-westworld-attribute-matrix-3e72d9d419df)
+[**About the Project - Medium article by original developer**](https://medium.com/@epassi/recreating-the-westworld-attribute-matrix-3e72d9d419df)
 
 ## Getting Started
 
@@ -28,3 +26,5 @@ grunt
 ```
 
 `grunt` (same as `grunt dev`) compiles the Sass, lints and transpiles the JS, bundles everything into `builds/dev`, and serves it at `http://localhost:3000` with live-reload via BrowserSync. Press `Ctrl+C` to stop the watch task when you're done.
+
+Once you run `grunt` just open the `index.html` file in a browser.
