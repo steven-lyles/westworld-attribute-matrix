@@ -8,3 +8,4 @@ resources/js/all.min.js
 
 # Don't include transpiled ES6 files.
 *.es6.js*
+node_modules
