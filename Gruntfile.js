@@ -3,10 +3,16 @@
 // http://www.smashingmagazine.com/2013/10/29/get-up-running-grunt/
 
 module.exports = function(grunt) {
-	require("jit-grunt")(grunt);
-
+        require('jit-grunt')(grunt, {
+          sprite: 'grunt-spritesmith',
+          foo: '@abc/grunt-foo',        // for private modules.
+          bar: 'custom/bar.js'          // for custom tasks.
+        });
 	grunt.initConfig({
 		sass: {
+			options: {
+				implementation: require("sass")
+			},
 			dev: {
 				files: [{
 					expand: true,
@@ -16,7 +22,7 @@ module.exports = function(grunt) {
 					ext: ".min.css"
 				}],
 				options: {
-					style: "compressed"
+					outputStyle: "compressed"
 				}
 			}
 		},
@@ -159,7 +165,7 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.loadNpmTasks("grunt-contrib-sass");
+	grunt.loadNpmTasks("grunt-sass");
 	grunt.loadNpmTasks("grunt-postcss");
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-eslint");
